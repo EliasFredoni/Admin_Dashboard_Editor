@@ -1,0 +1,92 @@
+{
+  "building": [
+    {
+      "id": "1",
+      "street": "Musterstraße",
+      "streetNumber": "1",
+      "postal_code": "12345",
+      "city": "Musterstadt",
+      "emission": 50.2,
+      "owner": "Max Mustermann",
+      "yearConstruction": 1998,
+      "netArea": 200,
+      "buildingType": "residential"
+    },
+    {
+      "id": "2",
+      "street": "Hauptstraße",
+      "streetNumber": "23",
+      "postal_code": "54321",
+      "city": "Großstadt",
+      "emission": 28.6,
+      "owner": "Sabine Müller",
+      "yearConstruction": 1976,
+      "netArea": 400,
+      "buildingType": "commercial"
+    },
+    {
+        "id": "5",
+        "street": "Hugostr.",
+        "streetNumber": "23",
+        "postal_code": "54321",
+        "city": "Großstadt",
+        "emission": 77.8,
+        "owner": "Sabine Müller",
+        "yearConstruction": 1976,
+        "netArea": 400,
+        "buildingType": "commercial"
+      },
+    {
+      "id": "3",
+      "street": "Am Park",
+      "streetNumber": "7",
+      "postal_code": "67890",
+      "city": "Kleinstadt",
+      "emission": 15.3,
+      "owner": "Johannes Schmidt",
+      "yearConstruction": 2005,
+      "netArea": 150,
+      "buildingType": "residential"
+    }
+  ],
+  "action": [
+    {
+      "id": "efdkslddsadlsdo392p3dsmf1a",
+      "name": "Pelletheizung",
+      "category": "heater",
+      "description": "Moderne, vollautomatische Holzheizung. Pellets bestehen in der Regel aus Resten der (industriellen) Holzverarbeitung.",
+      "advantages": [
+        "niedrige laufende Kosten",
+        "kein Netzanschluss erforderlich"
+      ],
+      "climateText": "Holz ist ein nachwachsender Rohstoff; bei seiner Verbrennung entsteht nur so viel CO2, wie das Holz beim Wachsen aus der Luft entzogen hat. Es wird daher oft als emissionsfrei angesehen. Es sollte aber beim Pelleteinkauf auf nachhaltige Forstwirtschaft geachtet werden, da andere Formen der Holzgewinnung die Funktion von Wäldern als CO2-Senke beeinträchtigen und darüber hinaus die lokalen Ökosysteme beschädigen können.",
+      "coverPicture": "https://energiequartier.de/_next/image?url=%2Fimages%2Fproducts%2FPelletheizung_OekoFEN.jpeg&w=3840&q=75",
+      "subsidies": "true",
+      "investmentCostsLogic": [
+        {
+          "name": "Kostenblock 1",
+          "description": "",
+          "logic": {
+            "*": [
+              2531.4,
+              {
+                "powerTo": [
+                  {
+                    "var": "netArea"
+                  },
+                  {
+                    "+": [
+                      1,
+                      -0.587
+                    ]
+                  }
+                ]
+              },
+              1.175
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
